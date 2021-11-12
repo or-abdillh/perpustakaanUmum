@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+    ;
+}
+
+/* header */
+.app header {
+    background-color: #05445E;
+    text-align: center;
+    color: whitesmoke;
+    padding: 1rem 0 0;
+    grid-area: header;
+}
+
+.app header .bottom-bar {
+    background-color: #D4F1F4;
+    color: #05445E;
+    padding: .5rem .75rem;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+/* Side bar */
+
+.app nav {
+    grid-area: nav;
+    height: 100vh;
+    background-color: #05445E;
+}
+
+.app nav ul li  {
+    margin: .75rem 0; 
+}
+
+.app nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: .5rem .75rem;
+    transition: .3s ease;
+}
+
+.app nav ul li a:hover, .app nav ul li a:active {
+    letter-spacing: .4px;
+}
+
+.app nav ul .nav-title {
+    background-color: #D4F1F4;
+    padding: .5rem .75rem;
+}
+
+/* Main contetn */
+.app main {
+    grid-area: main;
+    padding: .5rem .75rem;
+}
+
+.app main h1:first-child {
+    font-weight: 400;
+    border: 1px solid #05445E;
+    padding: .2rem;
+    margin-bottom: 2rem;
+}
+
+.app main .banner {
+    width: 100%;
+    text-align: center;
+}
+
+.app main .banner p {
+    margin-top: 5rem;
+    color: salmon;
+}
+
+/* Formulir */
+.app .form-wrapper {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper .input-wrapper {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.form-wrapper .input-wrapper label {
+    width: 30%
+}
+
+.form-wrapper .input-wrapper input {
+    width: 70%;
+}
+
+.form-wrapper .input-radio {
+    display: flex;
+    flexwwrap;
+} 
+
+.form-wrapper .title-radio {
+    width: 100%;
+    margin-right: 4rem;
+}
+
+.form-wrapper .input-radio .radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+}
