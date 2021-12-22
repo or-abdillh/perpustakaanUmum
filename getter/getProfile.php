@@ -1,8 +1,7 @@
 <?php
 
 //Get profile information from admin
-function getProfile() {
-    require("connection.php");
+function getProfile($conn) {
 
     //Create sql
     $sql = "SELECT * FROM accounts";

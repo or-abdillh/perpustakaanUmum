@@ -1,7 +1,7 @@
 <?php
-    require("/helper/connection.php");
-    require("/helper/auth.php");
-    require("/helper/getProfile.php");
+    require("connection.php");
+    require("./helper/auth.php");
+    require("./getter/getProfile.php");
 
     if ( !auth() ) header("Location: ./login.php?auth=403"); 
 
@@ -27,7 +27,7 @@
 
             <div class="bottom-bar">
                 <?php
-                    $admin = getProfile();
+                    $admin = getProfile($conn);
                     echo "<p>Hello, $admin</p>";
                 ?>
             </div>

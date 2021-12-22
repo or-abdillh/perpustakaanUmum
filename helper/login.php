@@ -9,10 +9,10 @@ if ( isset($_POST["login"]) ) {
     $sql = "SELECT username FROM accounts WHERE username = '$username' AND password = '$password'";
 
     $res = mysqli_query($conn, $sql);
-    
     if ( mysqli_num_rows($res) > 0 ) {
         session_start();
         $_SESSION["login"] = true;
+
         header("Location: ../index.php");
     } else header("Location: ../login.php?auth=403");
     
