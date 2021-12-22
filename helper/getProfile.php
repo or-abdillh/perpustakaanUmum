@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__."/../helper/connection.php";
-
 //Get profile information from admin
 function getProfile() {
+    require("connection.php");
+
     //Create sql
     $sql = "SELECT * FROM accounts";
     $res = mysqli_query($conn, $sql);
-    return $res["fullname"];
+    return mysqli_fetch_assoc($res)["fullname"];
 }
