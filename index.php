@@ -1,3 +1,12 @@
+<?php
+    require("/helper/connection.php");
+    require("/helper/auth.php");
+    require("/helper/getProfile.php");
+
+    if ( !auth() ) header("Location: ./login.php?auth=403"); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +26,17 @@
             <p>Politeknik Hasnur</p>
 
             <div class="bottom-bar">
-                <p>Hello, Admin</p>
+                <?php
+                    $admin = getProfile();
+                    echo "<p>Hello, $admin</p>";
+                ?>
             </div>
         </header>
 
         <nav>
             <ul>
                 <li>
-                    <a href="./index.html">Beranda</a>
+                    <a class="active" href="./index.html">Beranda</a>
                 </li>
                 <li>
                     <p class="nav-title">Entry data dan transaksi<p>

@@ -40,6 +40,10 @@
     background-color: #05445E;
 }
 
+.app nav .active {
+    text-decoration: underline;
+}
+
 .app nav ul li  {
     margin: .75rem 0; 
 }
@@ -108,7 +112,7 @@
 
 .form-wrapper .input-radio {
     display: flex;
-    flexwwrap;
+    flex-wrap: wrap;
 } 
 
 .form-wrapper .title-radio {
