@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .login-wrapper {
-            width: 40vw;
+            width: 30vw;
             margin: 2rem auto;
             background: #f4f4f4;
             border-radius: 5px;
@@ -31,6 +31,7 @@
         }
 
     </style>
+    
     <title>Login - Perpustakaan Umum</title>
 </head>
 <body>

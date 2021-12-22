@@ -42,7 +42,7 @@
                     <p class="nav-title">Entry data dan transaksi<p>
                 </li>
                 <li>
-                    <a href="./pages/inputDataAnggota.html">Data Anggota</a>
+                    <a href="./pages/inputDataAnggota.php">Data Anggota</a>
                 </li>
                 <li>
                     <a href="./pages/inputDataBuku.php">Data Buku</a>
@@ -54,7 +54,7 @@
                     <p class="nav-title">Laporan</p>
                 </li>
                 <li>
-                    <a href="">Lap. Data Anggota</a>
+                    <a href="./pages/laporanDataAnggota.php">Lap. Data Anggota</a>
                 </li>
                 <li>
                     <a href="./pages/laporanDataBuku.php">Lap. Data Buku</a>
@@ -68,6 +68,7 @@
             <div class="banner">
                 <h2>SELAMAT DATANG DI SISTEM INFORMASI PERPUSTAKAAN</h2>
                 <P>"Membaca adalah jendela dunia"</P>
+                <a style="text-decoration: none" href="./logout.php">Logout Akun</a>
             </div>
         </main>
 

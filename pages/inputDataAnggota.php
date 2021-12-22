@@ -2,16 +2,16 @@
     require("../connection.php");
     require("../helper/auth.php");
     require("../getter/getProfile.php");
-    require("../setter/setBuku.php");
+    require("../setter/setAnggota.php");
     //Nav Guard
     if ( !auth() ) header("Location: ../login.php?auth=403"); 
 
     $response = false;
-    if ( isset($_POST["addBuku"]) ) {
-        $response = setBuku($conn);
+    if ( isset($_POST["addAnggota"]) ) {
+        $response = setAnggota($conn);
     }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,10 +47,10 @@
                     <p class="nav-title">Entry data dan transaksi<p>
                 </li>
                 <li>
-                    <a href="./inputDataAnggota.php">Data Anggota</a>
+                    <a class="active" href="./inputDataAnggota.php">Data Anggota</a>
                 </li>
                 <li>
-                    <a class="active" href="./inputDataBuku.php">Data Buku</a>
+                    <a href="./inputDataBuku.html">Data Buku</a>
                 </li>
                 <li>
                     <a href="">Transaksi peminjaman</a>
@@ -59,48 +59,44 @@
                     <p class="nav-title">Laporan</p>
                 </li>
                 <li>
-                    <a href="">Lap. Data Anggota</a>
+                    <a href="./laporanDataAnggota.php">Lap. Data Anggota</a>
                 </li>
                 <li>
-                    <a href="./laporanDataBuku.php">Lap. Data Buku</a>
+                    <a href="">Lap. Data Buku</a>
                 </li>
             </ul>
         </nav>
 
         <main>
-            <h1>Input data buku</h1>
-            <?php
-                if ( $response ) echo "Data berhasil ditambahkan";
-            ?>
+            <h1>Input data anggota</h1>
+
             <form method="post" class="pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
-                        <label for="id">ID Buku</label>
-                        <input type="text" id="id" name="id_buku" placeholder="Masukkan ID buku" />
+                        <label for="id">ID anggota</label>
+                        <input type="text" id="id" name="id_anggota" placeholder="Masukkan id anggota" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="judul">Judul Buku</label>
-                        <input type="text" id="judul" name="judul_buku" placeholder="Masukkan judul buku" />
+                        <label for="nama">Nama Anggota</label>
+                        <input type="text" id="nama" name="nama_anggota" placeholder="Masukkan nama anggota" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="keterangan">Keterangan</label>
-                        <input type="text" id="keterangan" name="keterangan_buku" placeholder="Masukkan keterangan buku" />
+                        <label for="alamat">Alamat</label>
+                        <input type="text" id="alamat" name="alamat_anggota" placeholder="Masukkan alamat anggota" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="jumlah">Jumlah buku</label>
-                        <input type="text" id="jumlah" name="jumlah_buku" placeholder="Masukkan jumlah buku" />
-                    </div>
-                    <div class="pure-control-group">
-                        <label for="kategori">Kategori buku</label>
-                        <select id="kategori" name="kategori_buku">
-                            <option value="0" selected>--Kategori--</option>
-                            <option value="novel">Novel</option>
-                            <option value="pelajaran">Pelajaran</option>
-                            <option value="imformatika">Informatika</option>
-                        </select>
+                        <div class="pure-form">
+                            <label>Jenis Kelamin</label>
+                            <label for="checkbox-radio-option-two" class="pure-radio">
+                                <input type="radio" id="checkbox-radio-option-two" name="jenis_kelamin" value="pria" checked="" /> Pria
+                            </label>
+                            <label for="checkbox-radio-option-three" class="pure-radio">
+                                <input type="radio" id="checkbox-radio-option-three" name="jenis_kelamin" value="wanita" /> Wanita
+                            </label>
+                        </div>
                     </div>
                     <div class="pure-controls">
-                        <button type="submit" name="addBuku" class="pure-button pure-button-primary">Submit</button>
+                        <button type="submit" name="addAnggota" class="pure-button pure-button-primary">Submit</button>
                     </div>
                 </fieldset>
             </form>

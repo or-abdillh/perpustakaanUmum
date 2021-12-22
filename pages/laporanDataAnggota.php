@@ -1,7 +1,7 @@
 <?php
 
 require("../connection.php");
-require("../getter/getBuku.php");
+require("../getter/getAnggota.php");
 require("../helper/auth.php");
 require("../getter/getProfile.php");
 
@@ -57,43 +57,41 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                     <p class="nav-title">Laporan</p>
                 </li>
                 <li>
-                    <a href="./laporanDataAnggota.php">Lap. Data Anggota</a>
+                    <a class="active" href="./laporanDataAnggota.php">Lap. Data Anggota</a>
                 </li>
                 <li>
-                    <a class="active" href="./laporanDataBuku.php">Lap. Data Buku</a>
+                    <a href="./laporanDataBuku.php">Lap. Data Buku</a>
                 </li>
             </ul>
         </nav>
 
         <main>
-            <h1>Daftar Buku</h1>
+            <h1>Daftar Anggota</h1>
 
             <table class="pure-table">
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Judul Buku</th>
-                        <th>Kategori</th>
-                        <th>Keterangan</th>
-                        <th>Jumlah</th>
+                        <th>Nama</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Alamat</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                         $no = 1;
-                        foreach(getBuku($conn) as $buku) {
-                            $judul = $buku["judul_buku"];
-                            $kategori = $buku["kategori_buku"];
-                            $keterangan = $buku["keterangan"];
-                            $jumlah = $buku["jumlah_buku"];
+                        foreach(getAnggota($conn) as $item) {
+                            $nama = $item["nama"];
+                            $kelamin = $item["jenis_kelamin"];
+                            $alamat = $item["alamat"];
+                            $id = $item["id_anggota"];
                             echo <<<EOT
                                 <tr>
                                     <td>$no</td>
-                                    <td>$judul</td>
-                                    <td>$kategori</td>
-                                    <td>$keterangan</td>
-                                    <td>$jumlah</td>
+                                    <td>$nama</td>
+                                    <td>$kelamin</td>
+                                    <td>$alamat</td>
                                     <td>
                                     <a class="pure-button pure-button-primary" href="#">Ubah</a>
                                     <a class="pure-button pure-button-error" href="#">Hapus</a>
