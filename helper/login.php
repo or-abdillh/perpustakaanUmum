@@ -1,5 +1,5 @@
 <?php
-include("./connection.php");
+include("../connection.php");
 
 //Get data from $_POST
 if ( isset($_POST["login"]) ) {
@@ -13,7 +13,9 @@ if ( isset($_POST["login"]) ) {
         session_start();
         $_SESSION["login"] = true;
 
-        header("Location: ../index.php");
-    } else header("Location: ../login.php?auth=403");
+       header("Location: ../index.php");
+    } else {
+      header("Location: ../login.php?auth=403");
+    }
     
 }

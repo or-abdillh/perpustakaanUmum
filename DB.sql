@@ -48,6 +48,11 @@ CREATE TABLE `buku` (
   `jumlah_buku` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `accounts` (
+	`username` varchar(10) NOT NULL,
+	`password` varchar(10) NOT NULL,
+	`fullnmae` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `buku`
 --
@@ -72,6 +77,9 @@ ALTER TABLE `anggota`
 --
 ALTER TABLE `buku`
   ADD PRIMARY KEY (`id_buku`);
+
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -83,6 +83,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                     <?php
                         $no = 1;
                         foreach(getBuku($conn) as $buku) {
+                            $key = $buku["id_buku"];
                             $judul = $buku["judul_buku"];
                             $kategori = $buku["kategori_buku"];
                             $keterangan = $buku["keterangan"];
@@ -96,7 +97,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                                     <td>$jumlah</td>
                                     <td>
                                     <a class="pure-button pure-button-primary" href="#">Ubah</a>
-                                    <a class="pure-button pure-button-error" href="#">Hapus</a>
+                                    <a class="pure-button pure-button-error" href="../setter/removeBuku.php?key=$key">Hapus</a>
                                     </td>
                                 </tr>
                             EOT;
