@@ -82,6 +82,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                     <?php
                         $no = 1;
                         foreach(getAnggota($conn) as $item) {
+                            $key = $item["id_anggota"];
                             $nama = $item["nama"];
                             $kelamin = $item["jenis_kelamin"];
                             $alamat = $item["alamat"];
@@ -93,8 +94,8 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                                     <td>$kelamin</td>
                                     <td>$alamat</td>
                                     <td>
-                                    <a class="pure-button pure-button-primary" href="#">Ubah</a>
-                                    <a class="pure-button pure-button-error" href="#">Hapus</a>
+                                    <a class="pure-button pure-button-primary" href="update/anggota.php?key=$key">Ubah</a>
+                                    <a class="pure-button pure-button-error" href="../setter/removeAnggota.php?key=$key">Hapus</a>
                                     </td>
                                 </tr>
                             EOT;
