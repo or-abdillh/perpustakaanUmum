@@ -59,7 +59,7 @@
                     <p class="nav-title">Laporan</p>
                 </li>
                 <li>
-                    <a href="">Lap. Data Anggota</a>
+                    <a href="./laporanDataAnggota">Lap. Data Anggota</a>
                 </li>
                 <li>
                     <a href="./laporanDataBuku.php">Lap. Data Buku</a>

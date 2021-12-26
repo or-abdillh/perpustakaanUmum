@@ -20,7 +20,7 @@ CREATE TABLE `accounts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `accounts` (`username`, `password`, `fullname`) VALUES
-('20302022',	'2022',	'Oka R. Abdillah');
+('admin',	'admin',	'Fulan bin Fulan');
 
 DROP TABLE IF EXISTS `anggota`;
 CREATE TABLE `anggota` (
