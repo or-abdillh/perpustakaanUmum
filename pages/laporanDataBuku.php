@@ -96,7 +96,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                                     <td>$keterangan</td>
                                     <td>$jumlah</td>
                                     <td>
-                                    <a class="pure-button pure-button-primary" href="#">Ubah</a>
+                                    <a class="pure-button pure-button-primary" href="update/buku.php?key=$key">Ubah</a>
                                     <a class="pure-button pure-button-error" href="../setter/removeBuku.php?key=$key">Hapus</a>
                                     </td>
                                 </tr>
