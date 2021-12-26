@@ -50,7 +50,7 @@
                     <a class="active" href="./inputDataAnggota.php">Data Anggota</a>
                 </li>
                 <li>
-                    <a href="./inputDataBuku.html">Data Buku</a>
+                    <a href="./inputDataBuku.php">Data Buku</a>
                 </li>
                 <li>
                     <a href="">Transaksi peminjaman</a>
@@ -62,7 +62,7 @@
                     <a href="./laporanDataAnggota.php">Lap. Data Anggota</a>
                 </li>
                 <li>
-                    <a href="">Lap. Data Buku</a>
+                    <a href="./laporanDataBuku.php">Lap. Data Buku</a>
                 </li>
             </ul>
         </nav>

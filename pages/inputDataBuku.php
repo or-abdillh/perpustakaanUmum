@@ -75,10 +75,6 @@
             <form method="post" class="pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
-                        <label for="id">ID Buku</label>
-                        <input type="text" id="id" name="id_buku" placeholder="Masukkan ID buku" />
-                    </div>
-                    <div class="pure-control-group">
                         <label for="judul">Judul Buku</label>
                         <input type="text" id="judul" name="judul_buku" placeholder="Masukkan judul buku" />
                     </div>

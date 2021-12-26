@@ -9,7 +9,7 @@ function updateBuku($conn) {
    $kategori = $_POST["kategori_buku"];
    
    //sql
-   $sql = "UPDATE buku SET id_buku = '$id', judul_buku = '$judul',
+   $sql = "UPDATE buku SET judul_buku = '$judul',
    jumlah_buku = '$jumlah', kategori_buku = '$kategori', keterangan = '$keterangan' 
    WHERE id_buku = '$id'";
    

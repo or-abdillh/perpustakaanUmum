@@ -86,10 +86,7 @@
                 $kererangan = $response[0]["keterangan"];
                 
                    echo <<<EOT
-                    <div class="pure-control-group">
-                        <label for="id">ID Buku</label>
-                        <input value="$id" type="text" id="id" name="id_buku" placeholder="Masukkan ID buku" />
-                    </div>
+                   <input type="hidden" value="$id" name="id_buku" />
                     <div class="pure-control-group">
                         <label for="judul">Judul Buku</label>
                         <input value="$judul" type="text" id="judul" name="judul_buku" placeholder="Masukkan judul buku" />
