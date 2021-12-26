@@ -1,87 +1,53 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jun 09, 2021 at 04:13 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Adminer 4.8.1 MySQL 5.6.38 dump
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
+DROP DATABASE IF EXISTS `DB_Perpus`;
+CREATE DATABASE `DB_Perpus` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `DB_Perpus`;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+SET NAMES utf8mb4;
 
---
--- Database: `db_perpus`
---
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE `accounts` (
+  `username` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `fullname` varchar(35) NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+INSERT INTO `accounts` (`username`, `password`, `fullname`) VALUES
+('20302022',	'2022',	'Oka R. Abdillah');
 
---
--- Table structure for table `anggota`
---
-
+DROP TABLE IF EXISTS `anggota`;
 CREATE TABLE `anggota` (
   `id_anggota` int(10) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `jenis_kelamin` varchar(100) NOT NULL,
-  `alamat` text NOT NULL
+  `alamat` text NOT NULL,
+  PRIMARY KEY (`id_anggota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
+INSERT INTO `anggota` (`id_anggota`, `nama`, `jenis_kelamin`, `alamat`) VALUES
+(20302018,	'Fitriana',	'wanita',	'Mandastana'),
+(20302022,	'Oka R. Abdillah',	'pria',	'Handil Bakti');
 
---
--- Table structure for table `buku`
---
-
+DROP TABLE IF EXISTS `buku`;
 CREATE TABLE `buku` (
-  `id_buku` int(10) NOT NULL,
+  `id_buku` int(10) NOT NULL AUTO_INCREMENT,
   `judul_buku` varchar(100) NOT NULL,
   `kategori_buku` varchar(100) NOT NULL,
   `keterangan` text NOT NULL,
-  `jumlah_buku` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `accounts` (
-	`username` varchar(10) NOT NULL,
-	`password` varchar(10) NOT NULL,
-	`fullnmae` varchar(35) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
---
--- Dumping data for table `buku`
---
+  `jumlah_buku` int(10) NOT NULL,
+  PRIMARY KEY (`id_buku`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `buku` (`id_buku`, `judul_buku`, `kategori_buku`, `keterangan`, `jumlah_buku`) VALUES
-(1, '2', '3', '4', 5),
-(2, 'Belajar PHP', 'Infromatika', 'Tutorial', 10),
-(1222, '2222', 'Sejarah', '333', 444);
+(1,	'Kalkulus untuk SD kelas 3',	'pelajaran',	'Aman',	10),
+(2,	'Belajar PHP',	'Infromatika',	'Tutorial',	10),
+(4,	'Ayo memasak',	'novel',	'Kosong',	10);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `anggota`
---
-ALTER TABLE `anggota`
-  ADD PRIMARY KEY (`id_anggota`);
-
---
--- Indexes for table `buku`
---
-ALTER TABLE `buku`
-  ADD PRIMARY KEY (`id_buku`);
-
-ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`username`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- 2021-12-26 12:15:45
