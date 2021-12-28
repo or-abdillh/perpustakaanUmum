@@ -51,7 +51,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                     <a href="./inputDataBuku.php">Data Buku</a>
                 </li>
                 <li>
-                    <a href="">Transaksi peminjaman</a>
+                    <a href="./manajemenTransaksi.php">Transaksi peminjaman</a>
                 </li>
                 <li>
                     <p class="nav-title">Laporan</p>
@@ -72,6 +72,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>ID Anggota</th>
                         <th>Nama</th>
                         <th>Jenis Kelamin</th>
                         <th>Alamat</th>
@@ -90,6 +91,7 @@ if ( !auth() ) header("Location: ../login.php?auth=403");
                             echo <<<EOT
                                 <tr>
                                     <td>$no</td>
+                                    <td>$key</td>
                                     <td>$nama</td>
                                     <td>$kelamin</td>
                                     <td>$alamat</td>

@@ -48,7 +48,7 @@
                     <a href="./pages/inputDataBuku.php">Data Buku</a>
                 </li>
                 <li>
-                    <a href="">Transaksi peminjaman</a>
+                    <a href="./pages/manajemenTransaksi.php">Transaksi peminjaman</a>
                 </li>
                 <li>
                     <p class="nav-title">Laporan</p>

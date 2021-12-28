@@ -53,7 +53,7 @@
                     <a class="active" href="./inputDataBuku.php">Data Buku</a>
                 </li>
                 <li>
-                    <a href="">Transaksi peminjaman</a>
+                    <a href="./manajemenTransaksi.php">Transaksi peminjaman</a>
                 </li>
                 <li>
                     <p class="nav-title">Laporan</p>
@@ -74,6 +74,10 @@
             ?>
             <form method="post" class="pure-form pure-form-aligned">
                 <fieldset>
+                    <div class="pure-control-group">
+                        <label for="id_buku">ID Buku</label>
+                        <input type="text" id="id_buku" name="id_buku" placeholder="Masukkan ID buku" />
+                    </div>
                     <div class="pure-control-group">
                         <label for="judul">Judul Buku</label>
                         <input type="text" id="judul" name="judul_buku" placeholder="Masukkan judul buku" />
